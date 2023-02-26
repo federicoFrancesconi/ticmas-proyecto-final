@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .column {
     float: left;
     width: 50%;
@@ -9,3 +13,52 @@
     display: table;
     clear: both;
   }
+
+/* Elementos del nav */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.logo {
+    color:darkslateblue;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor:pointer;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a{
+    color:blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color:aqua;
+    transition: .5s;
+}
+
+.btn {
+    background-color: aquamarine;
+    color:black;
+    text-decoration: none;
+    border: 3px solid transparent;
+    font-size: 30px;
+    padding: 10px 10px;
+    border-radius: 30px;
+}
+
+.btn:hover {
+    background-color:blueviolet;
+    transition: .5s;
+}
