@@ -66,3 +66,8 @@ nav ul li a:hover{
     background-color:blueviolet;
     transition: .5s;
 }
+
+#fotoPerfil{
+    max-width: 50%;
+    max-height: 50%;
+}
