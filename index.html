@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,105 +14,121 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap" rel="stylesheet">
 
+    <!-- Inserto la referencia para los iconos de fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--Agrego los tags para generar el Open Graph-->
     <!--TO DO: AGREGAR URL AL CONSEGUIR DOMINIO-->
     <meta property="og:title" content="Federico Francesconi" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/perfilCurriculum.jpg"/>
+    <meta property="og:image" content="/images/perfilCurriculum.jpg" />
     <meta property="og:url" content="" />
 </head>
+
 <body>
-    <nav>
-        <span class="logo">Federico Francesconi</span>
-        <ul>
-            <li><a href="#sobre_mi">Sobre Mi</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#formacion">Formacion</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <a href="https://drive.google.com/file/d/1a_rYL_73c1uVZSQQeGednivPUMPKF8aI/view?usp=sharing" class="btn" target="_blank">Ver CV</a>
-    </nav>
+    <header>
+        <div>
+            <span class="logo">Federico Francesconi</span>
+            <a href="https://drive.google.com/file/d/1a_rYL_73c1uVZSQQeGednivPUMPKF8aI/view?usp=sharing" class="btn"
+                target="_blank">Ver CV</a>
+            <nav>
+                <ul>
+                    <li><a href="#sobre_mi">Sobre Mi</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#formacion">Formacion</a></li>
+                    <li><a href="#contacto">Contacto <i class="fa-brands fa-facebook"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-        <div class="row">
-            <div class="column">
-                <img id="fotoPerfil" src="/images/perfilCurriculum.jpg" alt="foto de fede">
+        <div class="sobreMi">
+            <div>
+                <img id="fotoPerfil" src="./images/perfilCurriculum.jpg" alt="foto de fede">
             </div>
-            
-            <div class="column">
+
+            <div>
                 <h1 id="sobre_mi">Federico Francesconi</h1>
                 <h2>Estudiante de Ingeniería en Informática</h2>
                 <p>Soy capaz de llevar a cabo tareas de programación generales y relacionadas a IT. Puedo aportar orden,
                     predisposición, y entendimiento en el campo informático. Busco un trabajo que me incentive a
-                    aprender y capacitarme, creciendo como profesional y a la vez como estudiante, y, de ser posible, 
+                    aprender y capacitarme, creciendo como profesional y a la vez como estudiante, y, de ser posible,
                     que sea medio tiempo para poder completar mi carrera en tiempo y forma.
-                    </p>
+                </p>
             </div>
         </div>
-        
-        <section>
+
+        <section class="section_hablilidades">
             <h2 id="habilidades">Habilidades</h2>
-            <ul>
-                <li>Conocimiento de lenguajes de programación:
-                    <ul>
-                        <li>C# (avanzado)</li>
-                        <li>Python (básico)</li>
-                        <li>SQL (intermedio)</li>
-                    </ul>
-                </li>
-                <li>Desarrollo de interfaces con Windows Forms.</li>
-                <li>Inglés avanzado escrito e intermedio hablado.</li>
-                <li>Manejo de repositorios GIT con GitHub.</li>
-                <li>Uso general de Office y herramientas de Google.</li>
-            </ul>
+            <div>
+                <ul>
+                    <li>Conocimiento de lenguajes de programación:
+                        <ul class="lista_lenguajes">
+                            <li>C# (avanzado)</li>
+                            <li>Python (básico)</li>
+                            <li>SQL (intermedio)</li>
+                        </ul>
+                    </li>
+                    <li>Desarrollo de interfaces con Windows Forms.</li>
+                    <li>Inglés avanzado escrito e intermedio hablado.</li>
+                    <li>Manejo de repositorios GIT con GitHub.</li>
+                    <li>Uso general de Office y herramientas de Google.</li>
+                </ul>
+            </div>
         </section>
-    
+
         <section>
             <h2 id="experiencia">Experiencia</h2>
-            <h3>Trabajo Final - Programación I</h3>
-            <p>Desarrollo de una aplicación de escritorio en C# con interfaz en WinForms.</p>
-            <a href="https://github.com/fBerto/UCSE-2022-Prog1-TupleMen"> Ver proyecto en GitHub</a>
-        
-            <h3>Fermaq Litoral S.A.</h3>
-            <p>Responsable IT y Ayudante de Logística - Data entry. Control de pedidos y 
-                stock. Reparto de maquinaria en Rafaela y zona.</p>
+            <div id="contenido_experiencia">
+                <h3>Trabajo Final - Programación I</h3>
+                <p>Desarrollo de una aplicación de escritorio en C# con interfaz en WinForms.</p>
+                <a href="https://github.com/fBerto/UCSE-2022-Prog1-TupleMen"> Ver proyecto en GitHub</a>
+
+                <h3>Fermaq Litoral S.A.</h3>
+                <p>Responsable IT y Ayudante de Logística - Data entry. Control de pedidos y
+                    stock. Reparto de maquinaria en Rafaela y zona.</p>
+            </div>
+
         </section>
-        
+
         <section>
             <h2 id="formacion">Formacion</h2>
             <div class="row">
-                <div class="column">
+                <div>
                     <span>2021 - actualidad</span>
                 </div>
-                <div class="column">
+                <div>
                     <span>Universidad Católica de Santiago del Estero - Rafaela</span>
                     <p>Ingeniería en Informática (finalizado 2° año) con promedio de 9,02.</p>
                 </div>
             </div>
-            
+
             <div class="row">
-                <div class="column">
+                <div>
                     <span>2015 - 2020</span>
                 </div>
-                <div class="column">
+                <div>
                     <span>E.E.T.P. N°460 “Guillermo Lehmann” - Rafaela</span>
                     <p>Técnico en Electrónica, graduado como mejor promedio con 8,93.</p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="column">
+                <div>
                     <span>2015 - 2019</span>
                 </div>
-                <div class="column">
+                <div>
                     <span>Escuela Preparatoria de Idioma Extranjero - Rafaela</span>
                     <p>5 años de Inglés Universitario, graduado en nivel alto con promedio de 3,51/5.</p>
                 </div>
             </div>
         </section>
-        
-        <section>
+
+        <section class="sectionContact">
             <div class="column">
                 <h2 id="contacto">Contacto</h2>
                 <h3>Telefono: +54 3492 610175</h3>
@@ -121,14 +138,20 @@
 
             <div class="column">
                 <form>
-                    <label for="nombre">Nombre</label>
-                    <input id="nombre_contacto" type="text" name="nombre_contacto">
-                    <label for="telefono_contacto">Telefono</label>
-                    <input id="telefono_contacto" type="tel" name="telefono_contacto">
-                    <label for="mail_contacto">Mail</label>
-                    <input id="mail_contacto" type="email" name="mail_contacto">
-                    <label for="mensaje_contacto">Mensaje</label>
-                    <input id="mensaje_contacto" type="text" name="mensaje_contacto">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre_contacto" type="text" name="nombre_contacto">
+                        <label for="telefono_contacto">Telefono</label>
+                        <input id="telefono_contacto" type="tel" name="telefono_contacto">
+                    </div>
+                    <div>
+                        <label for="mail_contacto">Mail</label>
+                        <input id="mail_contacto" type="email" name="mail_contacto">
+                    </div>
+                    <div>
+                        <label for="mensaje_contacto">Mensaje</label>
+                    </div>
+                    <textarea name="mensaje_contacto" id="mensaje_contacto" cols="30" rows="10"></textarea>
                 </form>
             </div>
         </section>
@@ -138,4 +161,5 @@
         <p>© 2023 Creado por Federico Francesconi</p>
     </footer>
 </body>
+
 </html>
