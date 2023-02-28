@@ -1,4 +1,5 @@
 *{
+    /*Aplico la fuente a todo el texto de la pagina, y corrijo las propiedades de las boxes*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,41 +10,12 @@ html {
     scroll-behavior: smooth;
 }
 
-.sectionContact{
-    display: flex;
-    justify-content: space-between;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-}
-
-.row div:nth-child(1){
-    width: 40%;
-    background-color: azure;
-    text-align: right;
-    padding-right: 30px;
-}
-
-.row div:nth-child(2){
-    width: 60%;
-}
-
-/* Lo saque de w3s, hace que el resto del contenido pase a estar debajo del div
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
 header {
     width: 100%;
-    background-color: burlywood;
+    background-color: rgb(234, 210, 178);
     padding-top: 20px;
-    position: sticky; /*Set the navbar to fixed position*/
-    top: 0; /* Position the navbar at the top of the page */
+    position: sticky; /*Ahora la barra de navegacion permanece siempre en la parte superior*/
+    top: 0; /*Necesario tambien fijarla en el top*/
 }
 
 header div{
@@ -62,14 +34,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    width: 100%; /* Full width */
+    width: 100%;
 }
 
-.logo {
+#header_logo_nombre {
     color:darkslateblue;
     font-size: 35px;
     letter-spacing: 1px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 nav ul {
@@ -82,8 +54,9 @@ nav ul li{
     padding: 10px 25px;
 }
 
+/*Decoro los links del nav con transiciones*/
 nav ul li a{
-    color:blue;
+    color:rgb(11, 11, 97);
     text-decoration: none;
     font-weight: bold;
     transition: .5s;
@@ -105,8 +78,9 @@ nav ul li a:hover{
     transition: transform .5s;
 }
 
+/*Le doy una animacion al boton de Ver CV al pasar por encima de este*/
 .btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color:blueviolet;
     transition: .5s;
 }
@@ -114,34 +88,47 @@ nav ul li a:hover{
 main{
     max-width: 1024px;
     margin: auto;
-    padding-top: 40px; 
+    padding-top: 40px;
 }
 
-.sobreMi{
+.sobre-mi{
     display: flex;
     justify-content: space-between;
 }
 
-#sobre_mi {
+#sobre_mi_nombre {
     font-size: 32px;
 }
 
-#fotoPerfil{
+#foto_perfil{
     display: block;
     margin-right: 20px;
     width: 500px;
     height: 500px;
 }
 
-.section_hablilidades div{
+#contenedor_habilidades {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.lista_lenguajes {
+#lista_lenguajes {
     padding-left: 20px;
+}
+
+#contenido_experiencia {
+    padding: 10px 200px;
+}
+
+.section-contacto{
+    display: flex;
+    justify-content: space-between;
+}
+
+#mensaje_contacto {
+    height: 100px;
 }
 
 footer{
@@ -150,12 +137,13 @@ footer{
     padding: 10px;
 }
 
+/*Centro todos los titulos de las secciones*/
 section h2 {
     text-align: center;
 }
 
 section {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px;
     border-top: 2px black solid;
 }
 
@@ -163,10 +151,26 @@ div.row {
     padding-bottom: 30px;
 }
 
-#contenido_experiencia {
-    padding: 10px 200px 10px 200px;
+.row {
+    display: flex;
+    justify-content: center;
 }
 
-#mensaje_contacto {
-    height: 100px;
+/*En lugar de usar columnas, hablo del primer hijo del contenedor dentro de la fila (primer columna)*/
+.row div:nth-child(1){
+    width: 40%;
+    text-align: right;
+    padding-right: 30px;
 }
+
+/*Del mismo modo trato al segundo hijo (segunda columna)*/
+.row div:nth-child(2){
+    width: 60%;
+}
+
+/*Hace que el resto del contenido pase a estar debajo del div (lo saque de W3Schools)*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

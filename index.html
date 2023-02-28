@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Federico Francesconi</title>
-    <link rel="icon" type="image/jpg" href="/images/perfilCurriculum.jpg">
+
+    <!--Agrego el favicon-->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <!--Hago referencia al archivo css-->
     <link rel="stylesheet" type="text/css" href="cv.css">
 
     <!--Inserto los links para las fuentes de Google, en este caso Raleway-->
@@ -30,10 +34,14 @@
 <body>
     <header>
         <div>
-            <span class="logo">Federico Francesconi</span>
+            <span id="header_logo_nombre">Federico Francesconi</span>
+
+            <!--Al boton de Ver CV le inserto un link que redirije al pdf de google drive con el CV-->
+            <!--Indico target blank para que se abra en una nueva pestana-->
             <a href="https://drive.google.com/file/d/1a_rYL_73c1uVZSQQeGednivPUMPKF8aI/view?usp=sharing" class="btn"
                 target="_blank">Ver CV</a>
             <nav>
+                <!--Creo los links ancla en la barra de navegacion-->
                 <ul>
                     <li><a href="#sobre_mi">Sobre Mi</a></li>
                     <li><a href="#habilidades">Habilidades</a></li>
@@ -46,13 +54,13 @@
     </header>
 
     <main>
-        <div class="sobreMi">
+        <div class="sobre-mi">
             <div>
-                <img id="fotoPerfil" src="./images/perfilCurriculum.jpg" alt="foto de fede">
+                <img id="foto_perfil" src="./images/fotoPerfil.jpg" alt="Foto de Federico Francesconi">
             </div>
 
             <div>
-                <h1 id="sobre_mi">Federico Francesconi</h1>
+                <h1 id="sobre_mi_nombre">Federico Francesconi</h1>
                 <h2>Estudiante de Ingeniería en Informática</h2>
                 <p>Soy capaz de llevar a cabo tareas de programación generales y relacionadas a IT. Puedo aportar orden,
                     predisposición, y entendimiento en el campo informático. Busco un trabajo que me incentive a
@@ -62,27 +70,29 @@
             </div>
         </div>
 
-        <section class="section_hablilidades">
+        <section class="section-habilidades">
             <h2 id="habilidades">Habilidades</h2>
-            <div>
+            <div id="contenedor_habilidades">
                 <ul>
                     <li>Conocimiento de lenguajes de programación:
-                        <ul class="lista_lenguajes">
+                        <ul id="lista_lenguajes">
                             <li>C# (avanzado)</li>
                             <li>Python (básico)</li>
                             <li>SQL (intermedio)</li>
+                            <li>JavaScript (básico)</li>
                         </ul>
                     </li>
                     <li>Desarrollo de interfaces con Windows Forms.</li>
                     <li>Inglés avanzado escrito e intermedio hablado.</li>
                     <li>Manejo de repositorios GIT con GitHub.</li>
                     <li>Uso general de Office y herramientas de Google.</li>
+                    <li>Desarrollo de páginas web con HTML y CSS, nivel básico</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2 id="experiencia">Experiencia</h2>
+            <h2 id="section-experiencia">Experiencia</h2>
             <div id="contenido_experiencia">
                 <h3>Trabajo Final - Programación I</h3>
                 <p>Desarrollo de una aplicación de escritorio en C# con interfaz en WinForms.</p>
@@ -96,6 +106,7 @@
         </section>
 
         <section>
+            <!--Creo diversos contenedores para poder separar el contenido a mi gusto-->
             <h2 id="formacion">Formacion</h2>
             <div class="row">
                 <div>
@@ -128,7 +139,7 @@
             </div>
         </section>
 
-        <section class="sectionContact">
+        <section class="section-contacto">
             <div class="column">
                 <h2 id="contacto">Contacto</h2>
                 <h3>Telefono: +54 3492 610175</h3>
