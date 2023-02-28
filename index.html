@@ -29,6 +29,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/perfilCurriculum.jpg" />
     <meta property="og:url" content="" />
+
+    <script src="cv.js"></script>
 </head>
 
 <body>
@@ -43,10 +45,10 @@
             <nav>
                 <!--Creo los links ancla en la barra de navegacion-->
                 <ul>
-                    <li><a href="#sobre_mi">Sobre Mi</a></li>
+                    <li><a href="#sobre_mi_nombre">Sobre Mí</a></li>
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#experiencia">Experiencia</a></li>
-                    <li><a href="#formacion">Formacion</a></li>
+                    <li><a href="#formacion">Formación</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -73,8 +75,8 @@
         <section class="section-habilidades">
             <h2 id="habilidades">Habilidades</h2>
             <div id="div_habilidades">
-                <ul>
-                    <li>Conocimiento de lenguajes de programación:
+                <ul id="lista_habilidades">
+                    <li><i class="fa-solid fa-code"></i> Conocimiento de lenguajes de programación:
                         <ul id="lista_lenguajes">
                             <li>C# (avanzado)</li>
                             <li>Python (básico)</li>
@@ -82,11 +84,11 @@
                             <li>JavaScript (básico)</li>
                         </ul>
                     </li>
-                    <li>Desarrollo de interfaces con Windows Forms.</li>
-                    <li>Inglés avanzado escrito e intermedio hablado.</li>
-                    <li>Manejo de repositorios GIT con GitHub.</li>
-                    <li>Uso general de Office y herramientas de Google.</li>
-                    <li>Desarrollo de páginas web con HTML y CSS, nivel básico</li>
+                    <li><i class="fa-solid fa-computer"></i> Desarrollo de interfaces con Windows Forms.</li>
+                    <li><i class="fa-solid fa-language"></i> Inglés avanzado escrito e intermedio hablado.</li>
+                    <li><i class="fa-brands fa-github"></i> Manejo de repositorios GIT con GitHub.</li>
+                    <li><i class="fa-solid fa-file-word"></i> Uso general de Office y herramientas de Google.</li>
+                    <li><i class="fa-regular fa-file-code"></i> Desarrollo de páginas web con HTML y CSS, nivel básico.</li>
                 </ul>
             </div>
         </section>
@@ -98,7 +100,7 @@
                 <p>Desarrollo de una aplicación de escritorio en C# con interfaz en WinForms.</p>
                 <a href="https://github.com/fBerto/UCSE-2022-Prog1-TupleMen" target="_blank" rel="no-referrer"> Ver proyecto en GitHub</a>
 
-                <h3>Fermaq Litoral S.A.</h3>
+                <h3 id="experiencia_fermaq">Fermaq Litoral S.A.</h3>
                 <p>Responsable IT y Ayudante de Logística - Data entry. Control de pedidos y
                     stock. Reparto de maquinaria en Rafaela y zona.</p>
             </div>
@@ -107,33 +109,33 @@
 
         <section>
             <!--Creo diversos contenedores para poder separar el contenido a mi gusto-->
-            <h2 id="formacion">Formacion</h2>
+            <h2 id="formacion">Formación</h2>
             <div class="row row-formacion">
                 <div>
-                    <span>2021 - actualidad</span>
+                    <span class="texto-bold">2021 - actualidad</span>
                 </div>
                 <div>
-                    <span>Universidad Católica de Santiago del Estero - Rafaela</span>
+                    <span class="institucion">Universidad Católica de Santiago del Estero - Rafaela</span>
                     <p>Ingeniería en Informática (finalizado 2° año) con promedio de 9,02.</p>
                 </div>
             </div>
 
             <div class="row row-formacion">
                 <div>
-                    <span>2015 - 2020</span>
+                    <span class="texto-bold">2015 - 2020</span>
                 </div>
                 <div>
-                    <span>E.E.T.P. N°460 “Guillermo Lehmann” - Rafaela</span>
+                    <span class="institucion">E.E.T.P. N°460 “Guillermo Lehmann” - Rafaela</span>
                     <p>Técnico en Electrónica, graduado como mejor promedio con 8,93.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div>
-                    <span>2015 - 2019</span>
+                    <span class="texto-bold">2015 - 2019</span>
                 </div>
                 <div>
-                    <span>Escuela Preparatoria de Idioma Extranjero - Rafaela</span>
+                    <span class="institucion">Escuela Preparatoria de Idioma Extranjero - Rafaela</span>
                     <p>5 años de Inglés Universitario, graduado en nivel alto con promedio de 3,51/5.</p>
                 </div>
             </div>
@@ -142,15 +144,38 @@
         <section class="section-contacto">
             <div class="column">
                 <h2 id="contacto">Contacto</h2>
-                <h3>Telefono: +54 3492 610175</h3>
-                <h3>Mail: ffedericofrancesconi@gmail.com</h3>
-                <h3>Direccion: Av. Italia 312, Rafaela, Santa Fe</h3>
+                <div class="row">
+                    <div>
+                        <span class="texto-bold">Teléfono</span>
+                    </div>
+                    <div>
+                        <span>+54 3492 610175</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <span class="texto-bold">Mail</span>
+                    </div>
+                    <div>
+                        <span>ffedericofrancesconi@gmail.com</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <span class="texto-bold">Dirección</span>
+                    </div>
+                    <div>
+                        <span>Av. Italia 312, Rafaela, Santa Fe, Argentina</span>
+                    </div>
+                </div>
 
                 <!--Inserto los iconos con sus respectivos enlaces-->
-                <a href="https://wa.me/+5493492610175" target="_blank"><i class="fa-brands fa-whatsapp fa-3x"></i></a>
-                <a href="mailto: ffedericofrancesconi@gmail.com"><i class="fa-solid fa-envelope fa-3x"></i></a>
-                <a href="https://goo.gl/maps/bxWVBSFXN39yhqtS7" target="_blank"><i class="fa-solid fa-map-location-dot fa-3x"></i></a>
-                <a href="https://www.linkedin.com/in/federico-francesconi-9400a7234/" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                <div id="iconos_contacto">
+                    <a href="https://wa.me/+5493492610175" target="_blank"><i class="fa-brands fa-whatsapp fa-3x"></i></a>
+                    <a href="mailto: ffedericofrancesconi@gmail.com"><i class="fa-solid fa-envelope fa-3x"></i></a>
+                    <a href="https://goo.gl/maps/bxWVBSFXN39yhqtS7" target="_blank"><i class="fa-solid fa-map-location-dot fa-3x"></i></a>
+                    <a href="https://www.linkedin.com/in/federico-francesconi-9400a7234/" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                </div>
             </div>
 
             <div class="column">
@@ -159,7 +184,7 @@
                     <div>
                         <label for="nombre">Nombre</label>
                         <input id="nombre_contacto" type="text" name="nombre_contacto">
-                        <label for="telefono_contacto">Telefono</label>
+                        <label for="telefono_contacto">Teléfono</label>
                         <input id="telefono_contacto" type="tel" name="telefono_contacto">
                     </div>
                     <div>
@@ -170,6 +195,9 @@
                         <label for="mensaje_contacto">Mensaje</label>
                     </div>
                     <textarea name="mensaje_contacto" id="mensaje_contacto" cols="30" rows="10"></textarea>
+                    <div id="boton_enviar">
+                        <input type="submit" value="Enviar" name="enviar">
+                    </div>
                 </form>
             </div>
         </section>
