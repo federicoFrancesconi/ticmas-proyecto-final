@@ -88,27 +88,36 @@ nav ul li a:hover{
 main{
     max-width: 1024px;
     margin: auto;
-    padding-top: 40px;
 }
 
 .sobre-mi{
+    padding: 10px 10px;
     display: flex;
     justify-content: space-between;
 }
 
 #sobre_mi_nombre {
-    font-size: 32px;
+    font-size: 50px;
+}
+
+#sobre_mi_estudios {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p, section li, label, span {
+    font-size: 18px;
 }
 
 #foto_perfil{
     display: block;
     margin-right: 20px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
 }
 
-#contenedor_habilidades {
-    margin-top: 20px;
+#div_habilidades {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,8 +127,8 @@ main{
     padding-left: 20px;
 }
 
-#contenido_experiencia {
-    padding: 10px 200px;
+#div_experiencia {
+    padding: 0px 200px;
 }
 
 .section-contacto{
@@ -144,14 +153,16 @@ footer{
 /*Centro todos los titulos de las secciones*/
 section h2 {
     text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
 section {
-    padding: 10px 10px;
+    padding: 20px 10px;
     border-top: 2px black solid;
 }
 
-div.row {
+.row-formacion {
     padding-bottom: 30px;
 }
 
