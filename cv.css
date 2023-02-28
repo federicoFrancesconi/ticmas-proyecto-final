@@ -127,6 +127,10 @@ main{
     justify-content: space-between;
 }
 
+i {
+    color: black;
+}
+
 #mensaje_contacto {
     height: 100px;
 }
