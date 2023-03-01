@@ -50,7 +50,7 @@
                     <li><a class="ancla" href="#experiencia">Experiencia</a></li>
                     <li><a class="ancla" href="#formacion">Formación</a></li>
                     <li><a class="ancla" href="#contacto">Contacto</a></li>
-                    <li id="cambio_modo" onclick="cambioModo()">Modo Oscuro</li>
+                    <li id="cambio_modo" onclick="cambioModo()"><i id="icono_luna" class="fa-solid fa-moon"></i> Modo Oscuro</li>
                 </ul>
             </nav>
         </div>
@@ -184,18 +184,18 @@
                 <form>
                     <div>
                         <label for="nombre">Nombre</label>
-                        <input id="nombre_contacto" type="text" name="nombre_contacto">
+                        <input id="nombre_contacto" type="text" name="nombre_contacto"required>
                         <label for="telefono_contacto">Teléfono</label>
-                        <input id="telefono_contacto" type="tel" name="telefono_contacto">
+                        <input id="telefono_contacto" type="tel" name="telefono_contacto" required>
                     </div>
                     <div>
                         <label for="mail_contacto">Mail</label>
-                        <input id="mail_contacto" type="email" name="mail_contacto">
+                        <input id="mail_contacto" type="email" name="mail_contacto" required>
                     </div>
                     <div>
                         <label for="mensaje_contacto">Mensaje</label>
                     </div>
-                    <textarea name="mensaje_contacto" id="mensaje_contacto" cols="30" rows="10"></textarea>
+                    <textarea name="mensaje_contacto" id="mensaje_contacto" cols="30" rows="10" required></textarea>
                     <div id="boton_enviar">
                         <input type="submit" value="Enviar" name="enviar">
                     </div>

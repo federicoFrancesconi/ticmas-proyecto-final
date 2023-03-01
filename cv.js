@@ -20,7 +20,7 @@ function modoOscuro() {
     //Cambio el color de fuente de todo a blanco
     document.body.style.color = 'white';
 
-    //Cmabio el fondo del header
+    //Cambio el fondo del header
     document.getElementById('header').style.backgroundColor = '#4d4d4d';
 
     //Cambio el color de fuente del logo
@@ -72,21 +72,12 @@ function modoOscuro() {
 
     //Cambio el texto y los colores del boton para cambiar de modo
     let botonCambio = document.getElementById('cambio_modo');
-    botonCambio.innerHTML = 'Modo claro';
+    botonCambio.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i> Modo Claro';
     botonCambio.style.backgroundColor = '#e2dfe8';
     botonCambio.style.color = '#2f2f30';
 }
 
 function modoClaro() {
-    document.body.style.backgroundColor = rgb(250, 249, 232);
-    document.getElementById('header').style.backgroundColor = rgb(234, 210, 178);
-    document.getElementById('header_logo_nombre').style.backgroundColor = rgb(90, 30, 0);
-    document.getElementById('ver_cv').style.backgroundColor = rgb(244, 170, 91);
-    document.getElementById('ver_cv').style.color = 'black';
-    document.getElementById('foto_perfil').style.border = '3px solid rgb(90, 30, 0)';
-    document.getElementsByTagName('i').style.color = 'black';
-    document.getElementsByTagName('footer').style.backgroundColor = 'darkgrey';
-    //document.getElementsByTagName('section').style.borderTop = '2px black solid';
-
-
+    //Una opcion es recargar la pagina, pero se borra el contenido de los input.
+    window.location.reload();
 }

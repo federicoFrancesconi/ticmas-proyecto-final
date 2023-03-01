@@ -116,3 +116,7 @@ section {
 #div_contacto {
     max-width: 300px;
 }
+
+form div {
+    padding: 5px 5px;
+}
