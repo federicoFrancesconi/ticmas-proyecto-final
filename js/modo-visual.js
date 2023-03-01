@@ -13,6 +13,12 @@ function cambioModo() {
     }
 }
 
+function modoClaro() {
+    //La opcion mas sencilla es simplemente recargar la pagina.
+    //El unico inconveniente es que se borra el contenido ingresado en los input
+    window.location.reload();
+}
+
 function modoOscuro() {
     //Cambio el fondo
     document.body.style.backgroundColor = 'black';
@@ -26,12 +32,7 @@ function modoOscuro() {
     //Cambio el color de fuente del logo
     document.getElementById('header_logo_nombre').style.color = 'grey';
 
-    //Cambio el color de fuente de los links ancla
-    const linksAncla = document.querySelectorAll('nav ul li a');
-    
-    for(let i = 0; i < linksAncla.length; i++) {
-        linksAncla[i].style.color = 'white';
-    }
+    cambiarFuenteLinksAncla();
 
     //Cambio los colores del boton
     document.getElementById('ver_cv').style.backgroundColor = 'grey';
@@ -40,23 +41,10 @@ function modoOscuro() {
     //Cambio el borde de la foto
     document.getElementById('foto_perfil').style.borderColor = 'grey';
 
-    //Cambio el color de los iconos
-    const iconos = document.getElementsByTagName('i');
-    for(let i = 0; i < iconos.length; i++) {
-        iconos[i].style.color = 'white';
-    }
-    
-    //Cambio el color del footer
-    const footers = document.getElementsByTagName('footer');
-    footers[0].style.backgroundColor = 'dark_grey';
-    footers[0].style.color = 'black';
-
-    /*Cambio el color de los separadores para cada seccion*/
-    const secciones = document.getElementsByTagName('section');
-
-    for(let i = 0; i < secciones.length; i++) {
-        secciones[i].style.borderTopColor = 'white';
-    }
+    cambiarColorDeLosIconos('white');
+    cambiarColorDelFooter('black', 'darkgrey');
+    cambiarEstiloBotonModo('#2f2f30', '#e2dfe8');
+    cambiarColorSeparadoresSecciones('white');
 
     //Cambio el color de los cuadros para las inputs
     const inputs = document.getElementsByTagName('input');
@@ -69,15 +57,46 @@ function modoOscuro() {
 
     //Cambio el color del link de github
     document.getElementById('link_github').style.color = '#a300c4';
+}
 
+function cambiarColorSeparadoresSecciones (color) {
+    /*Cambio el color de los separadores para cada seccion*/
+    const secciones = document.getElementsByTagName('section');
+
+    for(let i = 0; i < secciones.length; i++) {
+        secciones[i].style.borderTopColor = color;
+    }
+}
+
+function cambiarFuenteLinksAncla() {
+    //Cambio el color de fuente de los links ancla
+    const linksAncla = document.querySelectorAll('nav ul li a');
+    
+    for(let i = 0; i < linksAncla.length; i++) {
+        linksAncla[i].style.color = 'white';
+    }
+}
+
+function cambiarColorDeLosIconos(color) {
+    //Cambio el color de los iconos
+    const iconos = document.getElementsByTagName('i');
+
+    for(let i = 0; i < iconos.length; i++) {
+        iconos[i].style.color = color;
+    }
+}
+
+function cambiarColorDelFooter (colorFuente, colorBackground) {
+    //Cambio el color del footer
+    const footers = document.getElementsByTagName('footer');
+    footers[0].style.backgroundColor = colorBackground;
+    footers[0].style.color = colorFuente;
+}
+
+function cambiarEstiloBotonModo (colorFuente, colorBackground) {
     //Cambio el texto y los colores del boton para cambiar de modo
     let botonCambio = document.getElementById('cambio_modo');
     botonCambio.innerHTML = '<i class="fa-sharp fa-solid fa-sun"></i> Modo Claro';
-    botonCambio.style.backgroundColor = '#e2dfe8';
-    botonCambio.style.color = '#2f2f30';
-}
-
-function modoClaro() {
-    //Una opcion es recargar la pagina, pero se borra el contenido de los input.
-    window.location.reload();
+    botonCambio.style.backgroundColor = colorBackground;
+    botonCambio.style.color = colorFuente;
 }
