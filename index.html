@@ -34,13 +34,13 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div>
             <span id="header_logo_nombre">Federico Francesconi</span>
 
             <!--Al boton de Ver CV le inserto un link que redirije al pdf de google drive con el CV-->
             <!--Indico target blank para que se abra en una nueva pestana-->
-            <a href="https://drive.google.com/file/d/1a_rYL_73c1uVZSQQeGednivPUMPKF8aI/view?usp=sharing" class="btn"
+            <a id="ver_cv" href="https://drive.google.com/file/d/1a_rYL_73c1uVZSQQeGednivPUMPKF8aI/view?usp=sharing" class="btn"
                 target="_blank">Ver CV</a>
             <nav>
                 <!--Creo los links ancla en la barra de navegacion-->
@@ -50,6 +50,7 @@
                     <li><a href="#experiencia">Experiencia</a></li>
                     <li><a href="#formacion">Formación</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li id="cambioModo" onclick="cambioModo()">Cambiar Modo</li>
                 </ul>
             </nav>
         </div>

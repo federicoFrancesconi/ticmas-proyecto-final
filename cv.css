@@ -71,6 +71,10 @@ nav ul li a:hover{
     transition: .5s;
 }
 
+#cambioModo {
+    cursor: pointer;
+}
+
 .btn {
     background-color: rgb(244, 170, 91);
     color:black;
