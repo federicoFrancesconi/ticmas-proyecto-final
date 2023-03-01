@@ -1,0 +1,91 @@
+*{
+    /*Aplico la fuente a todo el texto de la pagina, y corrijo las propiedades de las boxes*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+/*Hago que al scrollear con los links ancla sea suave*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:rgb(250, 249, 232);
+}
+
+header {
+    width: 100%;
+    background-color: rgb(234, 210, 178);
+    padding-top: 20px;
+    position: sticky; /*Ahora la barra de navegacion permanece siempre en la parte superior*/
+    top: 0; /*Necesario tambien fijarla en el top*/
+}
+
+/*Uso las propiedades flex en el header para que quede bien alineado*/
+header div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: auto;
+}
+
+/*Le doy fuente y color al logo de la pagina*/
+#header_logo_nombre {
+    color:rgb(90, 30, 0);
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+/*Le doy colores y forma al boton de Ver CV*/
+.btn {
+    background-color: rgb(244, 170, 91);
+    color:black;
+    text-decoration: none;
+    border: 3px solid transparent;
+    font-size: 30px;
+    padding: 10px 10px;
+    border-radius: 30px;
+    transition: transform .5s;
+}
+
+/*Le doy una animacion al boton de Ver CV al pasar por encima de este*/
+.btn:hover {
+    transform: scale(1.1);
+    background-color:rgb(248, 221, 82);
+    transition: .5s;
+}
+
+footer{
+    background-color:darkgrey;
+    text-align: center;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/*En lugar de usar columnas, hablo del primer hijo del contenedor dentro de la fila (primer columna)*/
+.row div:nth-child(1){
+    width: 40%;
+    text-align: right;
+    padding-right: 30px;
+}
+
+/*Del mismo modo trato al segundo hijo (segunda columna)*/
+.row div:nth-child(2){
+    width: 60%;
+}
+
+/*Hace que el resto del contenido pase a estar debajo del div (lo saque de W3Schools)*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

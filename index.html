@@ -8,10 +8,12 @@
     <title>Federico Francesconi</title>
 
     <!--Agrego el favicon-->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/jpg" href="/images/fotoPerfil.jpg">
 
-    <!--Hago referencia al archivo css-->
-    <link rel="stylesheet" type="text/css" href="cv.css">
+    <!--Hago referencia a los archivos css-->
+    <link rel="stylesheet" type="text/css" href="css/cv.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
 
     <!--Inserto los links para las fuentes de Google, en este caso Raleway-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,8 +31,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/perfilCurriculum.jpg" />
     <meta property="og:url" content="" />
-
-    <script src="cv.js"></script>
 </head>
 
 <body>
@@ -45,12 +45,12 @@
             <nav>
                 <!--Creo los links ancla en la barra de navegacion-->
                 <ul>
-                    <li><a href="#sobre_mi_nombre">Sobre Mí</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#experiencia">Experiencia</a></li>
-                    <li><a href="#formacion">Formación</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li id="cambioModo" onclick="cambioModo()">Cambiar Modo</li>
+                    <li><a class="ancla" href="#sobre_mi_nombre">Sobre Mí</a></li>
+                    <li><a class="ancla" href="#habilidades">Habilidades</a></li>
+                    <li><a class="ancla" href="#experiencia">Experiencia</a></li>
+                    <li><a class="ancla" href="#formacion">Formación</a></li>
+                    <li><a class="ancla" href="#contacto">Contacto</a></li>
+                    <li id="cambio_modo" onclick="cambioModo()">Modo Oscuro</li>
                 </ul>
             </nav>
         </div>
@@ -99,7 +99,7 @@
             <div id="div_experiencia">
                 <h3>Trabajo Final - Programación I</h3>
                 <p>Desarrollo de una aplicación de escritorio en C# con interfaz en WinForms.</p>
-                <a href="https://github.com/fBerto/UCSE-2022-Prog1-TupleMen" target="_blank" rel="no-referrer"> Ver proyecto en GitHub</a>
+                <a id="link_github" href="https://github.com/fBerto/UCSE-2022-Prog1-TupleMen" target="_blank" rel="no-referrer"> Ver proyecto en GitHub</a>
 
                 <h3 id="experiencia_fermaq">Fermaq Litoral S.A.</h3>
                 <p>Responsable IT y Ayudante de Logística - Data entry. Control de pedidos y
@@ -143,7 +143,7 @@
         </section>
 
         <section class="section-contacto">
-            <div class="column">
+            <div id="div_contacto">
                 <h2 id="contacto">Contacto</h2>
                 <div class="row">
                     <div>
@@ -179,7 +179,7 @@
                 </div>
             </div>
 
-            <div class="column">
+            <div>
                 <h2>Deja tu mensaje</h2>
                 <form>
                     <div>
@@ -208,5 +208,7 @@
         <p>© 2023 Creado por Federico Francesconi</p>
     </footer>
 </body>
+
+<script src="cv.js"></script>
 
 </html>
