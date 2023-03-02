@@ -26,7 +26,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--Agrego los tags para generar el Open Graph-->
-    <!--TO DO: AGREGAR URL AL CONSEGUIR DOMINIO-->
+    <!----------------------TO DO: AGREGAR URL AL CONSEGUIR DOMINIO-------------------------->
     <meta property="og:title" content="Federico Francesconi" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/perfilCurriculum.jpg" />
@@ -34,23 +34,37 @@
 </head>
 
 <body>
+    <!--TODO: Quitar id y usar tag-->
     <header id="header">
         <div>
+            <!--Creo un menu para abrir el nav desde los dispositivos moviles-->
+            <div id="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
             <span id="header_logo_nombre">Federico Francesconi</span>
 
             <!--Al boton de Ver CV le inserto un link que redirije al pdf de google drive con el CV-->
             <!--Indico target blank para que se abra en una nueva pestana-->
-            <a id="ver_cv" href="https://drive.google.com/file/d/1a_rYL_73c1uVZSQQeGednivPUMPKF8aI/view?usp=sharing" class="btn"
-                target="_blank">Ver CV</a>
-            <nav>
-                <!--Creo los links ancla en la barra de navegacion-->
+            <a id="ver_cv"
+                href="https://drive.google.com/file/d/1a_rYL_73c1uVZSQQeGednivPUMPKF8aI/view?usp=sharing"
+                class="btn" target="_blank">Ver CV
+            </a>
+
+            <!--Creo una barra de navegacion con links ancla-->
+            <nav id="nav">
+                <!--La cruz para cerrar el menu solo sera visible en dispositivos moviles-->
+                <div id="cruz">
+                    <i class="fa-solid fa-times"></i>
+                </div>
                 <ul>
                     <li><a class="ancla" href="#sobre_mi_nombre">Sobre Mí</a></li>
                     <li><a class="ancla" href="#habilidades">Habilidades</a></li>
                     <li><a class="ancla" href="#experiencia">Experiencia</a></li>
                     <li><a class="ancla" href="#formacion">Formación</a></li>
                     <li><a class="ancla" href="#contacto">Contacto</a></li>
-                    <li id="cambio_modo" onclick="cambioModo()"><i id="icono_luna" class="fa-solid fa-moon"></i> Modo Oscuro</li>
+                    <!--Uno de los links sera un boton para cambiar a modo oscuro y viceversa-->
+                    <li id="cambio_modo"><i id="icono_luna" class="fa-solid fa-moon"></i> Modo Oscuro</li>
                 </ul>
             </nav>
         </div>
@@ -89,7 +103,8 @@
                     <li><i class="fa-solid fa-language"></i> Inglés avanzado escrito e intermedio hablado.</li>
                     <li><i class="fa-brands fa-github"></i> Manejo de repositorios GIT con GitHub.</li>
                     <li><i class="fa-solid fa-file-word"></i> Uso general de Office y herramientas de Google.</li>
-                    <li><i class="fa-regular fa-file-code"></i> Desarrollo de páginas web con HTML y CSS, nivel básico.</li>
+                    <li><i class="fa-regular fa-file-code"></i> Desarrollo de páginas web con HTML y CSS, nivel básico.
+                    </li>
                 </ul>
             </div>
         </section>
@@ -99,7 +114,8 @@
             <div id="div_experiencia">
                 <h3>Trabajo Final - Programación I</h3>
                 <p>Desarrollo de una aplicación de escritorio en C# con interfaz en WinForms.</p>
-                <a id="link_github" href="https://github.com/fBerto/UCSE-2022-Prog1-TupleMen" target="_blank" rel="no-referrer"> Ver proyecto en GitHub</a>
+                <a id="link_github" href="https://github.com/fBerto/UCSE-2022-Prog1-TupleMen" target="_blank"
+                    rel="no-referrer"> Ver proyecto en GitHub</a>
 
                 <h3 id="experiencia_fermaq">Fermaq Litoral S.A.</h3>
                 <p>Responsable IT y Ayudante de Logística - Data entry. Control de pedidos y
@@ -172,23 +188,30 @@
 
                 <!--Inserto los iconos con sus respectivos enlaces-->
                 <div id="iconos_contacto">
-                    <a href="https://wa.me/+5493492610175" target="_blank"><i class="fa-brands fa-whatsapp fa-3x"></i></a>
+                    <a href="https://wa.me/+5493492610175" target="_blank"><i
+                            class="fa-brands fa-whatsapp fa-3x"></i></a>
                     <a href="mailto: ffedericofrancesconi@gmail.com"><i class="fa-solid fa-envelope fa-3x"></i></a>
-                    <a href="https://goo.gl/maps/bxWVBSFXN39yhqtS7" target="_blank"><i class="fa-solid fa-map-location-dot fa-3x"></i></a>
-                    <a href="https://www.linkedin.com/in/federico-francesconi-9400a7234/" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                    <a href="https://goo.gl/maps/bxWVBSFXN39yhqtS7" target="_blank"><i
+                            class="fa-solid fa-map-location-dot fa-3x"></i></a>
+                    <a href="https://www.linkedin.com/in/federico-francesconi-9400a7234/" target="_blank"><i
+                            class="fa-brands fa-linkedin fa-3x"></i></a>
                 </div>
             </div>
 
             <div>
                 <h2>Deja tu mensaje</h2>
                 <form>
-                    <div>
-                        <label for="nombre">Nombre</label>
-                        <input id="nombre_contacto" type="text" name="nombre_contacto"required>
-                        <label for="telefono_contacto">Teléfono</label>
-                        <input id="telefono_contacto" type="tel" name="telefono_contacto" required>
+                    <div id="div_nombre_telefono">
+                        <div class="div-nom-tel-contacto">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre_contacto" type="text" name="nombre_contacto" required>
+                        </div>
+                        <div class="div-nom-tel-contacto">
+                            <label for="telefono_contacto">Teléfono</label>
+                            <input id="telefono_contacto" type="tel" name="telefono_contacto" required>
+                        </div>
                     </div>
-                    <div>
+                    <div id="div_mail_contacto">
                         <label for="mail_contacto">Mail</label>
                         <input id="mail_contacto" type="email" name="mail_contacto" required>
                     </div>
@@ -197,7 +220,7 @@
                     </div>
                     <textarea name="mensaje_contacto" id="mensaje_contacto" cols="30" rows="10" required></textarea>
                     <div id="boton_enviar">
-                        <input type="submit" value="Enviar" name="enviar" onclick="validarForm()">
+                        <input id="enviar" type="submit" value="Enviar" name="enviar">
                     </div>
                 </form>
             </div>
@@ -211,5 +234,6 @@
 
 <script src="js/modo-visual.js"></script>
 <script src="js/alertas.js"></script>
+<script src="./js/menu.js"></script>
 
 </html>

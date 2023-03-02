@@ -8,34 +8,38 @@ nav {
     width: 100%;
 }
 
+#cruz {
+    display: none;
+}
+
 nav ul {
     width: 100%;
 }
 
-nav ul li{
+nav ul li {
     list-style-type: none;
     display: inline-block;
     padding: 10px 25px;
 }
 
 /*Decoro los links del nav con transiciones*/
-nav ul li a{
-    color:black;
+nav ul li a {
+    color: black;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     transition: .5s;
 }
 
-nav ul li a:hover{
-    color:rgb(229, 90, 39);
+nav ul li a:hover {
+    color: rgb(229, 90, 39);
     transition: .5s;
 }
 
 #cambio_modo {
     cursor: pointer;
     background-color: rgba(34, 31, 31, 0.766);
-    color:white;
+    color: white;
     text-decoration: none;
     border: 1px solid transparent;
     padding: 5px 5px;
@@ -44,4 +48,30 @@ nav ul li a:hover{
 
 #icono_luna {
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 12px;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(222, 184, 135, 0.815);
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    #cruz {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+    }
 }

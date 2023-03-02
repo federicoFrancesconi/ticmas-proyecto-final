@@ -34,6 +34,11 @@ header div{
     margin: auto;
 }
 
+#menu {
+    display: none;
+    width: 30px;
+}
+
 /*Le doy fuente y color al logo de la pagina*/
 #header_logo_nombre {
     color:rgb(90, 30, 0);
@@ -89,3 +94,42 @@ footer{
     display: table;
     clear: both;
   }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    *{
+        font-size: 18px;
+    }
+    
+    /*Hago que al scrollear con los links ancla sea suave*/
+
+    header {
+        padding:  20px;
+    }
+        
+    #menu {
+        display: inline-block;
+        margin: 0;
+    }
+
+    #header_logo_nombre {
+        font-size: 25px;
+        letter-spacing: 0;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */

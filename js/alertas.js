@@ -1,3 +1,7 @@
+document.getElementById('enviar').onclick = () => {
+    validarForm();
+}
+
 function validarForm() {
     let nombre = obtenerValorInput('nombre_contacto');
     let telefono = obtenerValorInput('telefono_contacto');
