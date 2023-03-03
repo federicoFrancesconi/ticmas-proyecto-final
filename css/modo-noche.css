@@ -1,0 +1,71 @@
+body.darkmode {
+    background-color: black;
+    color: #e3e3e3;
+}
+
+.darkmode header {
+    background-color: #4d4d4d;
+}
+
+.darkmode header span {
+    color: grey;
+}
+
+.darkmode .btn {
+    background-color: grey;
+    color: #e3e3e3;
+    transition: transform .5s;
+}
+
+.darkmode .btn:hover {
+    background-color:rgb(45, 45, 43);
+    color: grey;
+    transition: .5s;
+}
+
+.darkmode #foto_perfil {
+    border-color: grey;
+}
+
+.darkmode input {
+    background-color: #bfbfbf;
+}
+
+.darkmode #mensaje_contacto {
+    background-color: #bfbfbf
+}
+
+.darkmode #link_github {
+    color: #a300c4;
+}
+
+.darkmode section {
+    border-top-color: #e3e3e3;
+}
+
+.darkmode nav ul li a {
+    color: #e3e3e3;
+}
+
+.darkmode nav ul li a:hover {
+    color: rgb(45, 45, 43);
+    transition: .5s;
+}
+
+.darkmode i {
+    color: #e3e3e3;
+}
+
+.darkmode footer {
+    background-color: darkgray;
+    color: black;
+}
+
+.darkmode #boton_cambio_modo {
+    background-color: #e2dfe8;
+    color: #2f2f30;
+}
+
+.darkmode #sol {
+    color:#2f2f30;
+}

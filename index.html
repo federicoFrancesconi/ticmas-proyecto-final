@@ -7,13 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Federico Francesconi</title>
 
-    <!--Agrego el favicon-->
-    <link rel="icon" type="image/jpg" href="/images/fotoPerfil.jpg">
+    <!--Agrego el favicon (en el generador de .ico vi que podia agregar mas elementos link para sumarle compatibilidad)-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
 
     <!--Hago referencia a los archivos css-->
-    <link rel="stylesheet" type="text/css" href="css/cv.css">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/modo-noche.css">
 
     <!--Inserto los links para las fuentes de Google, en este caso Raleway-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +47,7 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
 
-            <span id="header_logo_nombre">Federico Francesconi</span>
+            <span>Federico Francesconi</span>
 
             <!--Al boton de Ver CV le inserto un link que redirije al pdf de google drive con el CV-->
             <!--Indico target blank para que se abra en una nueva pestana-->
@@ -64,14 +69,14 @@
                     <li><a class="ancla" href="#formacion">Formación</a></li>
                     <li><a class="ancla" href="#contacto">Contacto</a></li>
                     <!--Uno de los links sera un boton para cambiar a modo oscuro y viceversa-->
-                    <li id="cambio_modo"><i id="icono_luna" class="fa-solid fa-moon"></i> Modo Oscuro</li>
+                    <li id="boton_cambio_modo"><i id="luna" class="fa-solid fa-moon"></i> Modo Oscuro</li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <div class="sobre-mi">
+        <section id="section_sobre_mi">
             <div>
                 <img id="foto_perfil" src="./images/fotoPerfil.jpg" alt="Foto de Federico Francesconi">
             </div>
@@ -85,7 +90,9 @@
                     que sea medio tiempo para poder completar mi carrera en tiempo y forma.
                 </p>
             </div>
-        </div>
+        </section>
+
+        <hr class="solid">
 
         <section class="section-habilidades">
             <h2 id="habilidades">Habilidades</h2>
@@ -109,6 +116,8 @@
             </div>
         </section>
 
+        <hr class="solid">
+
         <section>
             <h2 id="experiencia">Experiencia</h2>
             <div id="div_experiencia">
@@ -123,6 +132,8 @@
             </div>
 
         </section>
+
+        <hr class="solid">
 
         <section>
             <!--Creo diversos contenedores para poder separar el contenido a mi gusto-->
@@ -157,6 +168,8 @@
                 </div>
             </div>
         </section>
+
+        <hr class="solid">
 
         <section class="section-contacto">
             <div id="div_contacto">
@@ -232,8 +245,8 @@
     </footer>
 </body>
 
-<script src="js/modo-visual.js"></script>
-<script src="js/alertas.js"></script>
+<script src="./js/modo-noche.js"></script>
+<script src="./js/alertas.js"></script>
 <script src="./js/menu.js"></script>
 
 </html>

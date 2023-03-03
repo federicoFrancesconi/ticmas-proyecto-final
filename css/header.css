@@ -1,0 +1,70 @@
+header {
+    width: 100%;
+    background-color: rgb(234, 210, 178);
+    padding-top: 20px;
+    /*Ahora la barra de navegacion permanece siempre en la parte superior*/
+    position: sticky;
+    /*Necesario tambien fijarla en el top*/
+    top: 0;
+}
+
+/*Uso las propiedades flex en el header para que quede bien alineado*/
+header div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: auto;
+}
+
+/*El boton del menu solo se mostrara en los moviles (media queries)*/
+#menu {
+    display: none;
+    width: 30px;
+}
+
+/*Le doy fuente y color al logo de la pagina*/
+header span {
+    color:rgb(90, 30, 0);
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+/*Le doy colores y forma al boton de Ver CV*/
+.btn {
+    background-color: rgb(244, 170, 91);
+    text-decoration: none;
+    border: 3px solid transparent;
+    font-size: 30px;
+    padding: 10px 10px;
+    border-radius: 30px;
+    transition: transform .5s;
+}
+
+/*Le doy una animacion al boton de Ver CV al pasar por encima de este*/
+.btn:hover {
+    transform: scale(1.1);
+    background-color:rgb(248, 221, 82);
+    transition: .5s;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding:  20px;
+    }
+        
+    #menu {
+        display: inline-block;
+        margin: 0;
+    }
+
+    #header_logo_nombre {
+        font-size: 25px;
+        letter-spacing: 0;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+}

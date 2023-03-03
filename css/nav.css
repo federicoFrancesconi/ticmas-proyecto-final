@@ -36,7 +36,7 @@ nav ul li a:hover {
     transition: .5s;
 }
 
-#cambio_modo {
+#boton_cambio_modo {
     cursor: pointer;
     background-color: rgba(34, 31, 31, 0.766);
     color: white;
@@ -46,7 +46,7 @@ nav ul li a:hover {
     border-radius: 15px;
 }
 
-#icono_luna {
+#luna {
     color: white;
 }
 

@@ -3,7 +3,7 @@ main {
     margin: auto;
 }
 
-.sobre-mi {
+#section_sobre_mi {
     padding: 10px 10px;
     display: flex;
     justify-content: space-between;
@@ -113,7 +113,6 @@ h1 {
 
 section {
     padding: 20px 10px;
-    border-top: 2px black solid;
 }
 
 .row-formacion {
@@ -139,6 +138,35 @@ form>div {
 
 #nombre_contacto {
     margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/*En lugar de usar columnas, hablo del primer hijo del contenedor dentro de la fila (primer columna)*/
+.row div:nth-child(1){
+    width: 40%;
+    text-align: right;
+    padding-right: 30px;
+}
+
+/*Del mismo modo trato al segundo hijo (segunda columna)*/
+.row div:nth-child(2){
+    width: 60%;
+}
+
+/*Hace que el resto del contenido pase a estar debajo del div (lo saque de W3Schools)*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+hr {
+    border: 2px solid darkgray;
+    border-radius: 5px;
 }
 
 @media only screen and (max-width: 600px) {
