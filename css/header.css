@@ -18,18 +18,20 @@ header div{
     margin: auto;
 }
 
-/*El boton del menu solo se mostrara en los moviles (media queries)*/
-#menu {
-    display: none;
-    width: 30px;
-}
-
 /*Le doy fuente y color al logo de la pagina*/
 header span {
     color:rgb(90, 30, 0);
     font-size: 35px;
     letter-spacing: 2px;
 }
+
+/*El boton del menu solo se mostrara en los moviles (media queries)*/
+#menu {
+    display: none;
+    width: 30px;
+}
+
+/* || BOTON */
 
 /*Le doy colores y forma al boton de Ver CV*/
 .btn {
@@ -59,7 +61,7 @@ header span {
         margin: 0;
     }
 
-    #header_logo_nombre {
+    header span {
         font-size: 25px;
         letter-spacing: 0;
     }

@@ -23,7 +23,7 @@ body.darkmode {
     transition: .5s;
 }
 
-.darkmode #foto_perfil {
+.darkmode img {
     border-color: grey;
 }
 
@@ -68,4 +68,10 @@ body.darkmode {
 
 .darkmode #sol {
     color:#2f2f30;
+    transition: .5s;
+}
+
+.darkmode #boton_cambio_modo:hover #sol {
+    color: yellow;
+    transition: .5s;
 }

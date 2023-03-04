@@ -1,3 +1,5 @@
+const nav = document.querySelector('nav');
+
 document.getElementById('menu').onclick = () => {
     desplegarMenu();
 }
@@ -5,6 +7,12 @@ document.getElementById('menu').onclick = () => {
 document.getElementById('cruz').onclick = () => {
     ocultarMenu();
 }
+
+nav.addEventListener('click', function() {
+    if (window.innerWidth <= 600) {
+        ocultarMenu();
+    }
+});
 
 window.onresize = () => {
     if (window.innerWidth > 600) {
@@ -15,9 +23,9 @@ window.onresize = () => {
 }
 
 function desplegarMenu() {
-    document.getElementById('nav').style.display = 'block';
+    nav.style.display = 'block';
 }
 
 function ocultarMenu() {
-    document.getElementById('nav').style.display = 'none';
+    nav.style.display = 'none';
 }

@@ -1,25 +1,83 @@
+/* || GENERAL*/
+
 main {
     max-width: 1024px;
     margin: auto;
 }
 
-#section_sobre_mi {
-    padding: 10px 10px;
+section {
+    padding: 20px 10px;
+}
+
+/*Uso flex para las sections que tienen columnas dentro*/
+.section-columnas {
     display: flex;
     justify-content: space-between;
 }
 
-#sobre_mi_nombre {
+/*Centro todos los titulos de las secciones*/
+section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/*Hace que al tocar los links ancla del nav, el mismo nav no tape los titulos*/
+section h2, h1 {
+    scroll-margin-top: 155px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/*En lugar de usar columnas, hablo del primer hijo del contenedor dentro de la fila (primer columna)*/
+.row div:nth-child(1){
+    width: 30%;
+    text-align: right;
+    padding-right: 30px;
+}
+
+/*Del mismo modo trato al segundo hijo (segunda columna)*/
+.row div:nth-child(2){
+    width: 70%;
+}
+
+.bottom-espaciado {
+    margin-bottom: 30px;
+}
+
+hr {
+    border: 2px solid darkgray;
+    border-radius: 5px;
+}
+
+section hr {
+    display: none;
+}
+
+.texto-bold {
+    font-weight: bold;
+}
+
+i {
+    color: black;
+}
+
+/* || SECTION SOBRE MI*/
+
+h1 {
     font-size: 50px;
 }
 
-#sobre_mi_estudios {
+h3 {
     font-size: 24px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#foto_perfil {
+img {
     display: block;
     margin-right: 20px;
     width: 400px;
@@ -27,11 +85,7 @@ main {
     border: 3px solid rgb(90, 30, 0);
 }
 
-#div_habilidades {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* || SECTION HABILIDADES*/
 
 #lista_habilidades {
     list-style-type: none;
@@ -42,6 +96,8 @@ main {
     list-style-type: disc;
 }
 
+/* || SECTION EXPERIENCIA*/
+
 #div_experiencia {
     width: 500px;
     margin: auto;
@@ -51,37 +107,50 @@ main {
     color: rgb(132, 64, 29);
 }
 
-#experiencia_fermaq {
-    padding-top: 20px;
+#fermaq {
+    margin-top: 20px;
 }
+
+/* || SECTION FORMACION*/
 
 /*Hago que los nombres de las instituciones se vean en cursiva*/
 .institucion {
     font-style: italic;
 }
 
-.section-contacto {
-    display: flex;
-    justify-content: space-between;
-}
-
-.texto-bold {
-    font-weight: bold;
-}
+/* || SECTION CONTACTO*/
 
 #iconos_contacto {
-    padding: 20px 20px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    max-width: 300px;
+    padding: 20px 0;
+    margin: auto;
+}
+
+#deja_tu_mensaje {
+    max-width: 500px;
+    margin: auto;
+}
+
+#div_nombre_telefono {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
-i {
-    color: black;
+#div_nombre_telefono div {
+    width: 48%;
+}
+
+#div_nombre_telefono input {
+    width: 100%;
 }
 
 #div_mail_contacto {
     display: flex;
+    flex-direction: row;
 }
 
 #mail_contacto {
@@ -90,83 +159,25 @@ i {
 }
 
 #mensaje_contacto {
-    height: 50px;
+    height: 60px;
     width: 100%;
     resize: none;
 }
 
 #boton_enviar {
-    text-align: center;
+    margin: auto;
+    display:block;
+    width: 70px;
+    margin-top: 10px;
 }
 
-/*Centro todos los titulos de las secciones*/
-section h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-section h2,
-h1 {
-    scroll-margin-top: 150px;
-}
-
-section {
-    padding: 20px 10px;
-}
-
-.row-formacion {
-    padding-bottom: 30px;
-}
-
-#div_contacto {
-    max-width: 300px;
-}
-
-form input, form textarea {
+input, textarea {
     border-radius: 5px;
+    border-width: 1px;
 }
 
-form>div {
+form > div {
     padding: 5px;
-}
-
-#div_nombre_telefono {
-    display: flex;
-    flex-direction: row;
-}
-
-#nombre_contacto {
-    margin-right: 10px;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-}
-
-/*En lugar de usar columnas, hablo del primer hijo del contenedor dentro de la fila (primer columna)*/
-.row div:nth-child(1){
-    width: 40%;
-    text-align: right;
-    padding-right: 30px;
-}
-
-/*Del mismo modo trato al segundo hijo (segunda columna)*/
-.row div:nth-child(2){
-    width: 60%;
-}
-
-/*Hace que el resto del contenido pase a estar debajo del div (lo saque de W3Schools)*/
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-hr {
-    border: 2px solid darkgray;
-    border-radius: 5px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -174,29 +185,48 @@ hr {
         max-width: 100%;
     }
 
-    .sobre-mi {
+    .section-columnas {
         padding: 40px;
         flex-direction: column;
+        /*Mirar estas propiedades*/
+        display:flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
-    #sobre_mi_nombre {
+    h1 {
         margin-top: 30px;
     }
 
-    #sobre_mi_estudios {
+    h3 {
         font-size: 24px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    #foto_perfil {
+    img {
         margin-right: 0;
         width: 100%;
         height: auto;
     }
 
-    #div_habilidades {
+    .row {
         padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row div:nth-child(1){
+        width: 100%;
+        margin: auto;
+        padding-right: 0px;
+        text-align: center;
+    }
+
+    .row div:nth-child(2){
+        width: 100%;
+        margin: auto;
+        text-align: center;
     }
 
     #lista_habilidades li {
@@ -213,15 +243,9 @@ hr {
         padding: 20px;
     }
 
-    .section-contacto {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
     section h2 {
         font-size: 26px;
+        margin-top: 10px;
     }
 
     section h2,
@@ -230,55 +254,37 @@ hr {
     }
 
     section {
-        padding: 20px 10px;
-        border-top: 2px black solid;
+        padding: 10px 10px;
     }
 
-    .row-formacion {
-        padding-bottom: 30px;
+    #section_contacto {
+        padding: 10px 0px;
     }
 
-    #div_contacto {
-        max-width: 300px;
+    .bottom-espaciado {
+        margin-bottom: 0px;
     }
 
-    form input, form textarea {
-        border-radius: 5px;
+    section hr {
+        display:block;
     }
 
-    form>div {
-        padding: 5px;
+    #deja_tu_mensaje {
+        width: 90%;
+        margin: auto;
     }
 
     #div_nombre_telefono {
-        display: flex;
         flex-direction: column;
     }
 
-    #div_contacto {
-        max-width: 100%;
-        border-bottom: 2px solid #000;
-        padding-bottom: 20px;
-    }
-
-    #div_contacto .row {
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 10px;
-    }
-
-    #div_contacto .row div {
+    #div_nombre_telefono div {
         width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .div-nom-tel-contacto {
         display: flex;
         flex-direction: row;
     }
 
-    .div-nom-tel-contacto input {
+    #div_nombre_telefono input {
         margin-bottom: 10px;
         margin-left: 5px;
         width: 100%;

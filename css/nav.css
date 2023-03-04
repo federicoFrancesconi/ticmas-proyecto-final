@@ -8,14 +8,6 @@ nav {
     width: 100%;
 }
 
-#cruz {
-    display: none;
-}
-
-nav ul {
-    width: 100%;
-}
-
 nav ul li {
     list-style-type: none;
     display: inline-block;
@@ -23,15 +15,14 @@ nav ul li {
 }
 
 /*Decoro los links del nav con transiciones*/
-nav ul li a {
+.ancla {
     color: black;
     text-decoration: none;
-    font-size: 18px;
     font-weight: bold;
     transition: .5s;
 }
 
-nav ul li a:hover {
+.ancla:hover {
     color: rgb(229, 90, 39);
     transition: .5s;
 }
@@ -46,8 +37,18 @@ nav ul li a:hover {
     border-radius: 15px;
 }
 
+#boton_cambio_modo:hover #luna{
+    color: black;
+    transition: .5s;
+}
+
 #luna {
     color: white;
+    transition: .5s;
+}
+
+#cruz {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -60,6 +61,10 @@ nav ul li a:hover {
         left: 0;
         background: rgba(222, 184, 135, 0.815);
         display: none;
+    }
+
+    .darkmode nav {
+        background: rgba(62, 61, 59, 0.815);
     }
 
     nav ul li {

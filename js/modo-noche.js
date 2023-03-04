@@ -6,7 +6,7 @@ const textoBotonOscuro = '<i id="luna" class="fa-solid fa-moon"></i> Modo Oscuro
 
 let estado;
 
-boton.addEventListener('click', x => {
+boton.addEventListener('click', function() {
     //Si la clase estaba agregada la quito, y si no lo estaba la agrego
     body.classList.toggle('darkmode');
 
@@ -22,9 +22,11 @@ boton.addEventListener('click', x => {
 
 window.onload = () => {
     let modoActual = localStorage.getItem('modo') || 0;
-    console.log(modoActual);
+    
     if (modoActual == 'true') {
         body.classList.add('darkmode');
         boton.innerHTML = textoBotonClaro;
     }
+
+    body.classList.remove('hidden');
 }

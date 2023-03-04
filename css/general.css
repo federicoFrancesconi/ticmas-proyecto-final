@@ -21,4 +21,10 @@ footer{
     background-color:darkgrey;
     text-align: center;
     padding: 10px;
+    margin-top: 20px;
+}
+
+/*Creo una clase para ocultar el body hasta que no se haya cargado el modo oscuro*/
+.hidden {
+    display: none;
 }

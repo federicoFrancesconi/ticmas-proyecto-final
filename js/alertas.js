@@ -1,4 +1,4 @@
-document.getElementById('enviar').onclick = () => {
+document.getElementById('boton_enviar').onclick = () => {
     validarForm();
 }
 

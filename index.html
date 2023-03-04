@@ -38,9 +38,8 @@
     <meta property="og:url" content="" />
 </head>
 
-<body>
-    <!--TODO: Quitar id y usar tag-->
-    <header id="header">
+<body class="hidden">
+    <header>
         <div>
             <!--Creo un menu para abrir el nav desde los dispositivos moviles-->
             <div id="menu">
@@ -53,52 +52,75 @@
             <!--Indico target blank para que se abra en una nueva pestana-->
             <a id="ver_cv"
                 href="https://drive.google.com/file/d/1a_rYL_73c1uVZSQQeGednivPUMPKF8aI/view?usp=sharing"
-                class="btn" target="_blank">Ver CV
+                class="btn"
+                target="_blank">
+                Ver CV
             </a>
 
             <!--Creo una barra de navegacion con links ancla-->
-            <nav id="nav">
+            <nav>
                 <!--La cruz para cerrar el menu solo sera visible en dispositivos moviles-->
                 <div id="cruz">
                     <i class="fa-solid fa-times"></i>
                 </div>
                 <ul>
-                    <li><a class="ancla" href="#sobre_mi_nombre">Sobre Mí</a></li>
-                    <li><a class="ancla" href="#habilidades">Habilidades</a></li>
-                    <li><a class="ancla" href="#experiencia">Experiencia</a></li>
-                    <li><a class="ancla" href="#formacion">Formación</a></li>
-                    <li><a class="ancla" href="#contacto">Contacto</a></li>
+                    <li>
+                        <a class="ancla" href="#sobre_mi">Sobre Mí</a>
+                    </li>
+                    
+                    <li>
+                        <a class="ancla" href="#habilidades">Habilidades</a>
+                    </li>
+                    
+                    <li>
+                        <a class="ancla" href="#experiencia">Experiencia</a>
+                    </li>
+                    
+                    <li>
+                        <a class="ancla" href="#formacion">Formación</a>
+                    </li>
+                    
+                    <li>
+                        <a class="ancla" href="#contacto">Contacto</a>
+                    </li>
+
                     <!--Uno de los links sera un boton para cambiar a modo oscuro y viceversa-->
-                    <li id="boton_cambio_modo"><i id="luna" class="fa-solid fa-moon"></i> Modo Oscuro</li>
+                    <li id="boton_cambio_modo">
+                        <i id="luna" class="fa-solid fa-moon"></i> Modo Oscuro
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="section_sobre_mi">
+        <section class="section-columnas">
             <div>
-                <img id="foto_perfil" src="./images/fotoPerfil.jpg" alt="Foto de Federico Francesconi">
+                <img src="./images/fotoPerfil.jpg" alt="Foto de Federico Francesconi">
             </div>
 
             <div>
-                <h1 id="sobre_mi_nombre">Federico Francesconi</h1>
-                <h2 id="sobre_mi_estudios">Estudiante de Ingeniería en Informática</h2>
-                <p>Soy capaz de llevar a cabo tareas de programación generales y relacionadas a IT. Puedo aportar orden,
-                    predisposición, y entendimiento en el campo informático. Busco un trabajo que me incentive a
-                    aprender y capacitarme, creciendo como profesional y a la vez como estudiante, y, de ser posible,
-                    que sea medio tiempo para poder completar mi carrera en tiempo y forma.
+                <!--El id lo toma meramente por el link ancla del nav-->
+                <h1 id="sobre_mi">Federico Francesconi</h1>
+                <h3>Estudiante de Ingeniería en Informática</h3>
+                <p>
+                    Soy capaz de llevar a cabo tareas de programación generales y relacionadas a IT.
+                    Puedo aportar orden, predisposición, y entendimiento en el campo informático.
+                    Busco un trabajo que me incentive a aprender y capacitarme, creciendo como profesional
+                    y a la vez como estudiante, y, de ser posible, que sea medio tiempo para poder completar
+                    mi carrera en tiempo y forma.
                 </p>
             </div>
         </section>
 
-        <hr class="solid">
+        <hr>
 
-        <section class="section-habilidades">
+        <section>
             <h2 id="habilidades">Habilidades</h2>
-            <div id="div_habilidades">
+            <div class="row">
                 <ul id="lista_habilidades">
-                    <li><i class="fa-solid fa-code"></i> Conocimiento de lenguajes de programación:
+                    <li>
+                        <i class="fa-solid fa-code"></i> Conocimiento de lenguajes de programación
                         <ul id="lista_lenguajes">
                             <li>C# (avanzado)</li>
                             <li>Python (básico)</li>
@@ -110,35 +132,40 @@
                     <li><i class="fa-solid fa-language"></i> Inglés avanzado escrito e intermedio hablado.</li>
                     <li><i class="fa-brands fa-github"></i> Manejo de repositorios GIT con GitHub.</li>
                     <li><i class="fa-solid fa-file-word"></i> Uso general de Office y herramientas de Google.</li>
-                    <li><i class="fa-regular fa-file-code"></i> Desarrollo de páginas web con HTML y CSS, nivel básico.
-                    </li>
+                    <li><i class="fa-regular fa-file-code"></i> Desarrollo de páginas web con HTML y CSS, nivel básico.</li>
                 </ul>
             </div>
         </section>
 
-        <hr class="solid">
+        <hr>
 
         <section>
             <h2 id="experiencia">Experiencia</h2>
             <div id="div_experiencia">
                 <h3>Trabajo Final - Programación I</h3>
-                <p>Desarrollo de una aplicación de escritorio en C# con interfaz en WinForms.</p>
+                <p>
+                    Desarrollo de una aplicación de escritorio en C# con interfaz en WinForms.
+                </p>
                 <a id="link_github" href="https://github.com/fBerto/UCSE-2022-Prog1-TupleMen" target="_blank"
-                    rel="no-referrer"> Ver proyecto en GitHub</a>
+                    rel="no-referrer">
+                    Ver proyecto en GitHub
+                </a>
 
-                <h3 id="experiencia_fermaq">Fermaq Litoral S.A.</h3>
-                <p>Responsable IT y Ayudante de Logística - Data entry. Control de pedidos y
-                    stock. Reparto de maquinaria en Rafaela y zona.</p>
+                <h3 id="fermaq">Fermaq Litoral S.A.</h3>
+                <p>
+                    Responsable IT y Ayudante de Logística - Data entry. Control de pedidos y
+                    stock. Reparto de maquinaria en Rafaela y zona.
+                </p>
             </div>
 
         </section>
 
-        <hr class="solid">
+        <hr>
 
         <section>
             <!--Creo diversos contenedores para poder separar el contenido a mi gusto-->
             <h2 id="formacion">Formación</h2>
-            <div class="row row-formacion">
+            <div class="row bottom-espaciado">
                 <div>
                     <span class="texto-bold">2021 - actualidad</span>
                 </div>
@@ -148,7 +175,7 @@
                 </div>
             </div>
 
-            <div class="row row-formacion">
+            <div class="row bottom-espaciado">
                 <div>
                     <span class="texto-bold">2015 - 2020</span>
                 </div>
@@ -169,10 +196,10 @@
             </div>
         </section>
 
-        <hr class="solid">
+        <hr>
 
-        <section class="section-contacto">
-            <div id="div_contacto">
+        <section id="section_contacto" class="section-columnas">
+            <div>
                 <h2 id="contacto">Contacto</h2>
                 <div class="row">
                     <div>
@@ -182,7 +209,7 @@
                         <span>+54 3492 610175</span>
                     </div>
                 </div>
-                <div class="row">
+                <div id="div_mail" class="row">
                     <div>
                         <span class="texto-bold">Mail</span>
                     </div>
@@ -201,8 +228,7 @@
 
                 <!--Inserto los iconos con sus respectivos enlaces-->
                 <div id="iconos_contacto">
-                    <a href="https://wa.me/+5493492610175" target="_blank"><i
-                            class="fa-brands fa-whatsapp fa-3x"></i></a>
+                    <a href="https://wa.me/+5493492610175" target="_blank"><i class="fa-brands fa-whatsapp fa-3x"></i></a>
                     <a href="mailto: ffedericofrancesconi@gmail.com"><i class="fa-solid fa-envelope fa-3x"></i></a>
                     <a href="https://goo.gl/maps/bxWVBSFXN39yhqtS7" target="_blank"><i
                             class="fa-solid fa-map-location-dot fa-3x"></i></a>
@@ -211,37 +237,42 @@
                 </div>
             </div>
 
-            <div>
+            <hr>
+
+            <div id="deja_tu_mensaje">
                 <h2>Deja tu mensaje</h2>
                 <form>
                     <div id="div_nombre_telefono">
-                        <div class="div-nom-tel-contacto">
-                            <label for="nombre">Nombre</label>
+                        <div>
+                            <label for="nombre_contacto">Nombre</label>
                             <input id="nombre_contacto" type="text" name="nombre_contacto" required>
                         </div>
-                        <div class="div-nom-tel-contacto">
+
+                        <div>
                             <label for="telefono_contacto">Teléfono</label>
                             <input id="telefono_contacto" type="tel" name="telefono_contacto" required>
                         </div>
                     </div>
+
                     <div id="div_mail_contacto">
                         <label for="mail_contacto">Mail</label>
                         <input id="mail_contacto" type="email" name="mail_contacto" required>
                     </div>
+
                     <div>
                         <label for="mensaje_contacto">Mensaje</label>
                     </div>
+
                     <textarea name="mensaje_contacto" id="mensaje_contacto" cols="30" rows="10" required></textarea>
-                    <div id="boton_enviar">
-                        <input id="enviar" type="submit" value="Enviar" name="enviar">
-                    </div>
+                    <input id="boton_enviar" type="submit" value="Enviar" name="enviar">
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2023 Creado por Federico Francesconi</p>
+        <!--Uso el entitie &#169 para representar el simbolo de Copyright-->
+        <p>&#169 2023 Creado por Federico Francesconi</p>
     </footer>
 </body>
 
