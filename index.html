@@ -241,29 +241,29 @@
 
             <div id="deja_tu_mensaje">
                 <h2>Deja tu mensaje</h2>
-                <form>
+                <form method="get" autocomplete="off" return="false">
                     <div id="div_nombre_telefono">
                         <div>
                             <label for="nombre_contacto">Nombre</label>
-                            <input id="nombre_contacto" type="text" name="nombre_contacto" required>
+                            <input id="nombre_contacto" type="text" name="nombre_contacto" placeholder="Ingrese su nombre" required>
                         </div>
 
                         <div>
                             <label for="telefono_contacto">Teléfono</label>
-                            <input id="telefono_contacto" type="tel" name="telefono_contacto" required>
+                            <input id="telefono_contacto" type="tel" name="telefono_contacto" placeholder="Ingrese su telefono" required>
                         </div>
                     </div>
 
                     <div id="div_mail_contacto">
                         <label for="mail_contacto">Mail</label>
-                        <input id="mail_contacto" type="email" name="mail_contacto" required>
+                        <input id="mail_contacto" type="email" name="mail_contacto" placeholder="Ingrese su mail" required>
                     </div>
 
                     <div>
                         <label for="mensaje_contacto">Mensaje</label>
                     </div>
 
-                    <textarea name="mensaje_contacto" id="mensaje_contacto" cols="30" rows="10" required></textarea>
+                    <textarea name="mensaje_contacto" id="mensaje_contacto" cols="30" rows="10" placeholder="Escriba un mensaje, será bien recibido" required></textarea>
                     <input id="boton_enviar" type="submit" value="Enviar" name="enviar">
                 </form>
             </div>
