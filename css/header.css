@@ -51,7 +51,13 @@ header span {
     transition: .5s;
 }
 
-@media only screen and (max-width: 600px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
     header {
         padding:  20px;
     }
@@ -62,31 +68,29 @@ header span {
     }
 
     header span {
+        font-size: 30px;
+        letter-spacing: 1;
+    }
+
+    .btn {
+        font-size: 30px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    header span {
         font-size: 25px;
         letter-spacing: 0;
     }
 
     .btn {
-        font-size: 20px;
+        font-size: 24px;
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
+@media only screen and (max-width: 600px) {
+    .btn {
+        font-size: 20px;
+    }
 }

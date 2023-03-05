@@ -50,8 +50,13 @@ nav ul li {
 #cruz {
     display: none;
 }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    
+}
 
-@media only screen and (max-width: 600px) {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
     nav {
         padding: 12px;
         width: 100%;
@@ -70,7 +75,13 @@ nav ul li {
     nav ul li {
         display: block;
         text-align: center;
-        margin: 5px 0;
+        width:fit-content;
+        margin: auto;
+        font-size: 22px;
+    }
+
+    nav ul li a {
+        font-size: 22px;
     }
 
     #cruz {
@@ -79,24 +90,4 @@ nav ul li {
         right: 20px;
         display: block;
     }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
 }
