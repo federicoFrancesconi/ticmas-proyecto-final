@@ -20,6 +20,8 @@ boton.addEventListener('click', function() {
     boton.innerHTML = estado ? textoBotonClaro : textoBotonOscuro;
 });
 
+//Cada vez que cargue la pagina, buscara el modo almacenado en localStorage,
+//y agregara los estilos de dicho modo a la pagina.
 window.onload = () => {
     let modoActual = localStorage.getItem('modo') || 0;
     

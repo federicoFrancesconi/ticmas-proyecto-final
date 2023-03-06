@@ -57,10 +57,6 @@ section hr {
     display: none;
 }
 
-.texto-bold {
-    font-weight: bold;
-}
-
 i {
     color: black;
 }
@@ -113,13 +109,6 @@ img {
 
 #fermaq {
     margin-top: 20px;
-}
-
-/* || SECTION FORMACION*/
-
-/*Hago que los nombres de las instituciones se vean en cursiva*/
-.institucion {
-    font-style: italic;
 }
 
 /* || SECTION CONTACTO*/
@@ -184,15 +173,9 @@ form > div {
     padding: 5px;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
-    
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
     main {
-        max-width: 100%;
+        max-width: 900px;
     }
 
     h1 {
@@ -200,8 +183,7 @@ form > div {
     }
 
     img {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px;
     }
 
     .row {
@@ -217,17 +199,7 @@ form > div {
     }
 
     section h2 {
-        font-size: 26px;
         margin-top: 10px;
-    }
-
-    section h2,
-    h1 {
-        scroll-margin-top: 110px;
-    }
-
-    section {
-        padding: 10px 10px;
     }
 
     #section_contacto {
@@ -236,10 +208,6 @@ form > div {
         display:flex;
         justify-content: space-between;
         width: 100%;
-    }
-
-    .bottom-espaciado {
-        margin-bottom: 0px;
     }
 
     section hr {
@@ -268,7 +236,35 @@ form > div {
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+    main {
+        max-width: 100%;
+    }
+
+    img {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    section h2 {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+
+    section h2,
+    h1 {
+        scroll-margin-top: 110px;
+    }
+
+    section {
+        padding: 10px 10px;
+    }
+
+    .bottom-espaciado {
+        margin-bottom: 0px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
 
     .section-columnas {
@@ -284,7 +280,7 @@ form > div {
     }
 
     img {
-        margin-right: 0;
+        margin: 0px;
         width: 100%;
         height: auto;
     }
@@ -315,5 +311,12 @@ form > div {
     section h2,
     h1 {
         scroll-margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section h2,
+    h1 {
+        scroll-margin-top: 150px;
     }
 }

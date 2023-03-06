@@ -4,7 +4,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px;
+    padding: 12px 10px;
     width: 100%;
 }
 
@@ -35,6 +35,7 @@ nav ul li {
     border: 1px solid transparent;
     padding: 5px 5px;
     border-radius: 15px;
+    margin: 0px 13px;
 }
 
 #boton_cambio_modo:hover #luna{
@@ -47,15 +48,20 @@ nav ul li {
     transition: .5s;
 }
 
+/*Por defecto, la cruz del nav no debe mostrarse, se contempla en las media queries*/
 #cruz {
     display: none;
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+
 @media only screen and (max-width: 1200px) {
-    
+    /*Disminuyo la separacion entre elementos del nav para que no pasen a la siguiente linea*/
+    nav ul li {
+        padding: 10px 15px;
+    }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/*Al pasar a una pantalla de menos de 992px de ancho, el nav se oculta, y para mostrarlo hay que 
+hacer click sobre el menu (icono de tres lineas en la esquina izquierda superior).*/
 @media only screen and (max-width: 992px) {
     nav {
         padding: 12px;
@@ -80,11 +86,17 @@ nav ul li {
         font-size: 22px;
     }
 
+    #boton_cambio_modo {
+        width:fit-content;
+        margin: auto;
+    }
+
     nav ul li a {
         font-size: 22px;
     }
 
     #cruz {
+        width: fit-content;
         position: absolute;
         top: 20px;
         right: 20px;

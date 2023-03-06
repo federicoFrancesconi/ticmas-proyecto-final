@@ -1,3 +1,5 @@
+/*En la clase darkmode, que se aplica al body con el modo noche,
+lo unico que hago es cambiar los colores del texto o del background*/
 body.darkmode {
     background-color: black;
     color: #e3e3e3;

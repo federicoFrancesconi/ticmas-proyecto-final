@@ -12,6 +12,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/*El atributo transition es para que los estilos cambien de modo visual de forma suave*/
 body {
     background:rgb(250, 249, 232);
     transition: all 0.5s;
